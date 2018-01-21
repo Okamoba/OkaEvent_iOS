@@ -10,6 +10,8 @@ import UIKit
 
 class MailAuthViewController: UIViewController {
 
+    @IBOutlet weak var mailTextFiled: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
