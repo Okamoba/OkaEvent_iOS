@@ -24,6 +24,11 @@ class MailAuthViewController: UIViewController {
     }
     
 
+    
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
