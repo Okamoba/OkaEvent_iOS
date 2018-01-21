@@ -37,7 +37,13 @@ class MailAuthViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
-        
+        guard let mail = mailTextFiled.text else {
+            return
+        }
+        guard let password = passwordTextField.text else {
+            return
+        }
+        mailLogin(email: mail, password: password)
     }
     
     /*
