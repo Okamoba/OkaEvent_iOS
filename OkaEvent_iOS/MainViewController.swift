@@ -21,6 +21,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func mailAuthViewControllerTransition() {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Authentication", bundle: nil)
+        let mailAuthViewController = storyboard.instantiateViewController(withIdentifier: "MailAuthViewController")
+        present(mailAuthViewController, animated: true, completion: nil)
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if Auth.auth().currentUser != nil {
