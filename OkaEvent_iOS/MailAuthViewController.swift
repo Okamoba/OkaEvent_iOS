@@ -46,6 +46,13 @@ class MailAuthViewController: UIViewController {
         mailLogin(email: mail, password: password)
     }
     
+    @IBAction func textFiledEditEnd(_ sender: Any) {
+        guard let textField = sender as? UITextField else {
+            return
+        }
+        textField.resignFirstResponder()
+    }
+    
     /*
     // MARK: - Navigation
 
