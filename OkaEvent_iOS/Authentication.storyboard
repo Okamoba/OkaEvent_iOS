@@ -50,6 +50,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mfC-3n-2vM"/>
                     </view>
+                    <connections>
+                        <outlet property="mailTextFiled" destination="y3w-Fg-udK" id="WY1-hJ-FfQ"/>
+                        <outlet property="passwordTextField" destination="3lg-Ez-dMB" id="3dU-Hw-YGB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTv-M6-IMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
