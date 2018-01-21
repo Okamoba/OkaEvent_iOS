@@ -18,6 +18,7 @@
 		CC48B47633C17B19B823F004 /* Pods_OkaEvent_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B0C1C9D4A6356551B1FE08 /* Pods_OkaEvent_iOSUITests.framework */; };
 		E913446220144D9900A833C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E913446120144D9900A833C3 /* GoogleService-Info.plist */; };
 		E9134464201465A400A833C3 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9134463201465A400A833C3 /* Authentication.storyboard */; };
+		E91344662014666500A833C3 /* MailAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91344652014666500A833C3 /* MailAuthViewController.swift */; };
 		F7090BF0C3A1D82AA4A00751 /* Pods_OkaEvent_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B2D33436DA39F7C224B207 /* Pods_OkaEvent_iOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		E8AE8F380049B2729AD1A630 /* Pods-OkaEvent_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkaEvent_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OkaEvent_iOSTests/Pods-OkaEvent_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E913446120144D9900A833C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9134463201465A400A833C3 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		E91344652014666500A833C3 /* MailAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailAuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				B2B487FF1FDCFEC600BDB5A9 /* AppDelegate.swift */,
 				B2B488011FDCFEC600BDB5A9 /* MainViewController.swift */,
+				E91344652014666500A833C3 /* MailAuthViewController.swift */,
 				B2B488031FDCFEC600BDB5A9 /* Main.storyboard */,
 				E9134463201465A400A833C3 /* Authentication.storyboard */,
 				B2B488061FDCFEC600BDB5A9 /* Assets.xcassets */,
@@ -481,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2B488021FDCFEC600BDB5A9 /* MainViewController.swift in Sources */,
+				E91344662014666500A833C3 /* MailAuthViewController.swift in Sources */,
 				B2B488001FDCFEC600BDB5A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
