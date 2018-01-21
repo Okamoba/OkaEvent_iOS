@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MailAuthViewController: UIViewController {
 
@@ -22,8 +23,18 @@ class MailAuthViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    func mailLogin(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if let e = error {
+                print(e)
+                return
+            }
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+            self.present(mainViewController, animated: true, completion: nil)
+        }
+    }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         
