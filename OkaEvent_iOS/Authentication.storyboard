@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="-191.19999999999999" y="-75.112443778110944"/>
         </scene>
-        <!--View Controller-->
+        <!--Mail Sign In View Controller-->
         <scene sceneID="sY5-fb-l0G">
             <objects>
-                <viewController id="Fjf-6J-Mr5" sceneMemberID="viewController">
+                <viewController id="Fjf-6J-Mr5" customClass="MailSignInViewController" customModule="OkaEvent_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ElD-kT-pPd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
