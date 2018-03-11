@@ -30,7 +30,9 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if Auth.auth().currentUser != nil {
+            print("OK?")
         } else {
+            print("call mail AuthViewController Transition")
             mailAuthViewControllerTransition()
         }
     }
