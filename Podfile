@@ -6,8 +6,10 @@ target 'OkaEvent_iOS' do
   use_frameworks!
 
   # Pods for OkaEvent_iOS
-  pod 'Firebase/Core'
-  pod 'Firebase/Auth'
+#  pod 'Firebase/Core'
+  pod 'Firebase'
+  pod 'FirebaseCore', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :tag => '4.11.0'
+  pod 'FirebaseAuth', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :tag => '4.11.0'
 
   target 'OkaEvent_iOSTests' do
     inherit! :search_paths
