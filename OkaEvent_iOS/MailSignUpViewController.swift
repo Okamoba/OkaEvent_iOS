@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 
-class MailSignInViewController: UIViewController {
+class MailSignUpViewController: UIViewController {
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
