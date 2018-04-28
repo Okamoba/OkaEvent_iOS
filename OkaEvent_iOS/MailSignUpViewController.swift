@@ -18,9 +18,25 @@ class MailSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    //userNameをセット
+    func registerUserName(response: @escaping ()->()) {
+        guard let userName = userNameTextField.text else {
+            return
+        }
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.displayName = userName
+        changeRequest?.commitChanges(completion: { error in
+            if let error = error {
+                print(error)
+                return
+            }
+            response()
+        })
+    }
 
     @IBAction func SignUpTapped(_ sender: Any) {
-        guard let userName = userNameTextField.text else {
+        guard userNameTextField.text != nil else {
             return
         }
         guard let mailAddress = mailTextField.text else {
@@ -30,20 +46,19 @@ class MailSignUpViewController: UIViewController {
             return
         }
         
+        //emailとパスワードを登録
         Auth.auth().createUser(withEmail: mailAddress, password: password) { (user, error) in
             if let error = error {
                 print(error)
+                return
             }
-            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-            changeRequest?.displayName = userName
-            changeRequest?.commitChanges { (error) in
-                if let error = error {
-                    print(error)
-                }
+            //emailとパスワードを登録できたらユーザー名を登録する
+            self.registerUserName {
+                //ユーザー名を設定できたらMainVeiewControllerへ遷移
+                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+                self.present(mainViewController, animated: true, completion: nil)
             }
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
-            self.present(mainViewController, animated: true, completion: nil)
         }
     }
 
