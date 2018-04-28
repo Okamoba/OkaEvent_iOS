@@ -139,12 +139,30 @@
                                     <segue destination="MJv-ZA-dL5" kind="show" id="7Yw-ac-XjX"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h7X-6h-7q7">
+                                <rect key="frame" x="100" y="129" width="174" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFiledEditEnd:" destination="MJv-ZA-dL5" eventType="editingDidEndOnExit" id="yem-9M-MG0"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exM-SQ-0Vh">
+                                <rect key="frame" x="100" y="100" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2nH-t6-Teo"/>
                     </view>
                     <connections>
                         <outlet property="mailTextField" destination="uPx-as-ssu" id="sC1-yI-saG"/>
+                        <outlet property="nameTextField" destination="h7X-6h-7q7" id="uG7-dM-2dX"/>
                         <outlet property="passwordTextField" destination="B6P-cz-qwT" id="RS0-re-Pyh"/>
                     </connections>
                 </viewController>
