@@ -6,6 +6,7 @@ target 'OkaEvent_iOS' do
   use_frameworks!
 
   # Pods for OkaEvent_iOS
+  pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
 
