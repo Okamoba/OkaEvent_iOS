@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
+import FirebaseFirestore
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
  {
@@ -52,6 +54,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel!.text = fruits[indexPath.row]
         
         return cell
+    }
+    
+    func loadEventList(){
+        var defaultStore: Firestore!
+        defaultStore = Firestore.firestore()
+        let ref = defaultStore.collection("events")
+        
+        ref.order(by: "start_datetime").limit(to: 3).getDocuments{ (snapshot, error) in
+            guard let snapshot = snapshot
+                else{
+                    print("Error : \(error!)")
+                    return
+            }
+            for doc in snapshot.documents {
+                print("name(asc) : \(doc.data())")
+            }
+        }
     }
 }
 
