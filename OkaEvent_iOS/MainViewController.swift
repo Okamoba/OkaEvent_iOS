@@ -27,6 +27,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
 
+    //イベント投稿画面の動作確認用
+    //float buttonが実装された消す
+    @IBAction func addButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Post", bundle: nil)
+        let postVC = storyboard.instantiateViewController(withIdentifier: "PostEventNavigationController")
+        present(postVC, animated: true, completion: nil)
+    }
+    
     func mailAuthViewControllerTransition() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Authentication", bundle: nil)
         let mailAuthViewController = storyboard.instantiateViewController(withIdentifier: "MailAuthViewController")

@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Dch-QR-Jvm">
             <objects>
-                <navigationController id="oOB-W5-8bM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PostEventNavigationController" id="oOB-W5-8bM" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Eu-Vu-wss">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
