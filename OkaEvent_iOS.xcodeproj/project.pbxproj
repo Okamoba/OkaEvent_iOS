@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B24677D220B06FDD0030449F /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24677D120B06FDD0030449F /* EventData.swift */; };
 		B2B488001FDCFEC600BDB5A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B487FF1FDCFEC600BDB5A9 /* AppDelegate.swift */; };
 		B2B488021FDCFEC600BDB5A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B488011FDCFEC600BDB5A9 /* MainViewController.swift */; };
 		B2B488051FDCFEC600BDB5A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B488031FDCFEC600BDB5A9 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		943A7EFBE701C86F4846E7C5 /* Pods-OkaEvent_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkaEvent_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OkaEvent_iOS/Pods-OkaEvent_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9538945E601DC9358AD77575 /* Pods-OkaEvent_iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkaEvent_iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OkaEvent_iOSUITests/Pods-OkaEvent_iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A39FDE4E646AE5FE4EF7707B /* Pods-OkaEvent_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkaEvent_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OkaEvent_iOS/Pods-OkaEvent_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		B24677D120B06FDD0030449F /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
 		B2B487FC1FDCFEC600BDB5A9 /* OkaEvent_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkaEvent_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B487FF1FDCFEC600BDB5A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2B488011FDCFEC600BDB5A9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				B2B487FF1FDCFEC600BDB5A9 /* AppDelegate.swift */,
 				B2B488011FDCFEC600BDB5A9 /* MainViewController.swift */,
+				B24677D120B06FDD0030449F /* EventData.swift */,
 				E91344652014666500A833C3 /* MailAuthViewController.swift */,
 				E977863720393EF8005B7F2E /* MailSignUpViewController.swift */,
 				B2B488031FDCFEC600BDB5A9 /* Main.storyboard */,
@@ -189,6 +192,7 @@
 				B2B487F91FDCFEC600BDB5A9 /* Frameworks */,
 				B2B487FA1FDCFEC600BDB5A9 /* Resources */,
 				08230222E88BEA79B9EE700E /* [CP] Embed Pods Frameworks */,
+				A5FDFB371726B50A9124C705 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,6 +211,8 @@
 				B2B4880C1FDCFEC600BDB5A9 /* Sources */,
 				B2B4880D1FDCFEC600BDB5A9 /* Frameworks */,
 				B2B4880E1FDCFEC600BDB5A9 /* Resources */,
+				DD188002847AAA55C86B7F4F /* [CP] Embed Pods Frameworks */,
+				FFEC4CF224ACE750F7B88E54 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +232,8 @@
 				B2B488171FDCFEC600BDB5A9 /* Sources */,
 				B2B488181FDCFEC600BDB5A9 /* Frameworks */,
 				B2B488191FDCFEC600BDB5A9 /* Resources */,
+				C76EE6BA089BFE5A3077137A /* [CP] Embed Pods Frameworks */,
+				0A5ADA9AFAF97B962E9E93F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,19 +328,48 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOS/Pods-OkaEvent_iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOS/Pods-OkaEvent_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A5ADA9AFAF97B962E9E93F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSUITests/Pods-OkaEvent_iOSUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		21FA9C8D0FD939C0519DEA1D /* [CP] Check Pods Manifest.lock */ = {
@@ -389,6 +426,66 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A5FDFB371726B50A9124C705 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOS/Pods-OkaEvent_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C76EE6BA089BFE5A3077137A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSUITests/Pods-OkaEvent_iOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD188002847AAA55C86B7F4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSTests/Pods-OkaEvent_iOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFEC4CF224ACE750F7B88E54 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSTests/Pods-OkaEvent_iOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -398,6 +495,7 @@
 			files = (
 				B2B488021FDCFEC600BDB5A9 /* MainViewController.swift in Sources */,
 				E91344662014666500A833C3 /* MailAuthViewController.swift in Sources */,
+				B24677D220B06FDD0030449F /* EventData.swift in Sources */,
 				B2B488001FDCFEC600BDB5A9 /* AppDelegate.swift in Sources */,
 				E977863820393EF8005B7F2E /* MailSignUpViewController.swift in Sources */,
 			);

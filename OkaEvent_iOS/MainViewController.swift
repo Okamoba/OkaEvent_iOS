@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
  {
     @IBOutlet weak var TreeView: UITableView!
     //配列fruitsを設定
-    let fruits = ["apple", "orange", "melon", "banana", "pineapple"]
+    var events: Array<EventData> = [EventData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,23 +36,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if Auth.auth().currentUser != nil {
-            print("OK?")
+            loadEventList()
         } else {
             print("call mail AuthViewController Transition")
             mailAuthViewControllerTransition()
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fruits.count
+        return events.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // セルを取得する
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventListCell", for: indexPath)
         
         // セルに表示する値を設定する
-        cell.textLabel!.text = fruits[indexPath.row]
-        
+        cell.textLabel?.text = events[indexPath.row].name
+        cell.detailTextLabel?.text = events[indexPath.row].date
+
         return cell
     }
     
@@ -61,6 +62,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         defaultStore = Firestore.firestore()
         let ref = defaultStore.collection("events")
         
+        self.events.removeAll()
+        self.TreeView.reloadData()
         ref.order(by: "start_datetime").limit(to: 3).getDocuments{ (snapshot, error) in
             guard let snapshot = snapshot
                 else{
@@ -68,8 +71,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     return
             }
             for doc in snapshot.documents {
-                print("name(asc) : \(doc.data())")
+                let docData = doc.data()
+                let dataName: String = docData["name"] as! String
+                let dataDate = docData["start_datetime"] as! Date
+                let formatter: DateFormatter = DateFormatter()
+                formatter.dateFormat = "yyyy年MM月dd日"
+                let formattedDate: String = formatter.string(from: dataDate)
+                self.events.append(EventData(name: dataName, date: formattedDate))
             }
+            print("call reloadData")
+            self.TreeView.reloadData()
         }
     }
 }
