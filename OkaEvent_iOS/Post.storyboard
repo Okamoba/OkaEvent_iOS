@@ -189,6 +189,7 @@
                         <outlet property="endDateTimeTextField" destination="92f-yU-RG4" id="sqD-Gq-r0p"/>
                         <outlet property="linkTextField" destination="uge-On-sa4" id="mdM-nd-z1a"/>
                         <outlet property="locationTextFielld" destination="VRn-wv-wdQ" id="gL7-jc-d2b"/>
+                        <outlet property="postButton" destination="3vA-0v-eCT" id="JUd-PX-Ibk"/>
                         <outlet property="startDateTimeTextField" destination="3YA-xU-xkh" id="VWi-PP-NMk"/>
                         <outlet property="titleTextField" destination="SeP-mC-8sj" id="Tdy-mo-Rzq"/>
                     </connections>

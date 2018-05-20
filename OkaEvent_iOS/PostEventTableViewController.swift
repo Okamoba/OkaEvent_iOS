@@ -15,6 +15,7 @@ class PostEventTableViewController: UITableViewController, UITextFieldDelegate, 
     @IBOutlet weak var linkTextField: UITextField!
     @IBOutlet weak var startDateTimeTextField: UITextField!
     @IBOutlet weak var endDateTimeTextField: UITextField!
+    @IBOutlet weak var postButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
