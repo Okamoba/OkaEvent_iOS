@@ -10,16 +10,23 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import FirebaseFirestore
+import Floaty
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FloatyDelegate
  {
     @IBOutlet weak var TreeView: UITableView!
+    
+    var floatyButton: Floaty = Floaty()
+    
     //配列fruitsを設定
     var events: Array<EventData> = [EventData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        floatyButton.fabDelegate = self
+        view.addSubview(floatyButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,6 +87,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             self.TreeView.reloadData()
         }
+    }
+    
+    func emptyFloatySelected(_ floaty: Floaty) {
+        print("Floaty emptyFloatySelected")
     }
 }
 
