@@ -20,6 +20,7 @@
 		E913446220144D9900A833C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E913446120144D9900A833C3 /* GoogleService-Info.plist */; };
 		E9134464201465A400A833C3 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9134463201465A400A833C3 /* Authentication.storyboard */; };
 		E91344662014666500A833C3 /* MailAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91344652014666500A833C3 /* MailAuthViewController.swift */; };
+		E95F7BA120B1462C002EC65C /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E95F7BA020B1462C002EC65C /* Post.storyboard */; };
 		E977863820393EF8005B7F2E /* MailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977863720393EF8005B7F2E /* MailSignUpViewController.swift */; };
 		F7090BF0C3A1D82AA4A00751 /* Pods_OkaEvent_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B2D33436DA39F7C224B207 /* Pods_OkaEvent_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		E913446120144D9900A833C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9134463201465A400A833C3 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		E91344652014666500A833C3 /* MailAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailAuthViewController.swift; sourceTree = "<group>"; };
+		E95F7BA020B1462C002EC65C /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		E977863720393EF8005B7F2E /* MailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 				E91344652014666500A833C3 /* MailAuthViewController.swift */,
 				E977863720393EF8005B7F2E /* MailSignUpViewController.swift */,
 				B2B488031FDCFEC600BDB5A9 /* Main.storyboard */,
+				E95F7BA020B1462C002EC65C /* Post.storyboard */,
 				E9134463201465A400A833C3 /* Authentication.storyboard */,
 				B2B488061FDCFEC600BDB5A9 /* Assets.xcassets */,
 				B2B488081FDCFEC600BDB5A9 /* LaunchScreen.storyboard */,
@@ -295,6 +298,7 @@
 				E913446220144D9900A833C3 /* GoogleService-Info.plist in Resources */,
 				B2B488071FDCFEC600BDB5A9 /* Assets.xcassets in Resources */,
 				B2B488051FDCFEC600BDB5A9 /* Main.storyboard in Resources */,
+				E95F7BA120B1462C002EC65C /* Post.storyboard in Resources */,
 				E9134464201465A400A833C3 /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
