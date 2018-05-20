@@ -49,9 +49,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // セルを取得する
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventListCell", for: indexPath)
         
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy年MM月dd日 h:mm:00"
+        let startDateTime = events[indexPath.row].startDateTime
+        let startDatetimeStr = formatter.string(from: startDateTime)
         // セルに表示する値を設定する
         cell.textLabel?.text = events[indexPath.row].name
-        cell.detailTextLabel?.text = events[indexPath.row].date
+        cell.detailTextLabel?.text = startDatetimeStr
 
         return cell
     }
@@ -72,11 +76,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             for doc in snapshot.documents {
                 let docData = doc.data()
                 let dataName: String = docData["name"] as! String
-                let dataDate = docData["start_datetime"] as! Date
-                let formatter: DateFormatter = DateFormatter()
-                formatter.dateFormat = "yyyy年MM月dd日"
-                let formattedDate: String = formatter.string(from: dataDate)
-                self.events.append(EventData(name: dataName, date: formattedDate))
+                let dataDescription: String = docData["text"] as! String
+                let startDataDate = docData["start_datetime"] as! Date
+                let endDataDate  = docData["end_datetime"] as! Date
+                let adress  = docData["address"] as! String
+                let url: String = docData["url"] as! String
+                self.events.append(EventData(name: dataName, startDateTime: startDataDate, endDateTime: endDataDate, address: adress, description: dataDescription, url: url))
             }
             self.TreeView.reloadData()
         }
