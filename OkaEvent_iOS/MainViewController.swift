@@ -14,7 +14,7 @@ import Floaty
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FloatyDelegate
  {
-    @IBOutlet weak var TreeView: UITableView!
+    @IBOutlet weak var treeView: UITableView!
     
     var floatyButton: Floaty = Floaty()
     
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let ref = defaultStore.collection("events")
         
         events.removeAll()
-        TreeView.reloadData()
+        treeView.reloadData()
         ref.order(by: "start_datetime").limit(to: 3).getDocuments{ (snapshot, error) in
             guard let snapshot = snapshot
                 else{
@@ -85,7 +85,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let formattedDate: String = formatter.string(from: dataDate)
                 self.events.append(EventData(name: dataName, date: formattedDate))
             }
-            self.TreeView.reloadData()
+            self.treeView.reloadData()
         }
     }
     
