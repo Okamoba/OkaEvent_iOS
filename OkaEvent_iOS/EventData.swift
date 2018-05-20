@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EventData : NSObject {
+struct EventData {
     var name: String
     var date: String
     

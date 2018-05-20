@@ -38,7 +38,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if Auth.auth().currentUser != nil {
             loadEventList()
         } else {
-            print("call mail AuthViewController Transition")
             mailAuthViewControllerTransition()
         }
     }
@@ -79,7 +78,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let formattedDate: String = formatter.string(from: dataDate)
                 self.events.append(EventData(name: dataName, date: formattedDate))
             }
-            print("call reloadData")
             self.TreeView.reloadData()
         }
     }
