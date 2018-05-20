@@ -13,6 +13,8 @@ class PostEventTableViewController: UITableViewController, UITextFieldDelegate, 
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var locationTextFielld: UITextField!
     @IBOutlet weak var linkTextField: UITextField!
+    @IBOutlet weak var startDateTimeTextField: UITextField!
+    @IBOutlet weak var endDateTimeTextField: UITextField!
     
     
     override func viewDidLoad() {
@@ -20,6 +22,8 @@ class PostEventTableViewController: UITableViewController, UITextFieldDelegate, 
         descriptionTextView.delegate = self
         locationTextFielld.delegate = self
         linkTextField.delegate = self
+        startDateTimeTextField.delegate = self
+        endDateTimeTextField.delegate = self
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

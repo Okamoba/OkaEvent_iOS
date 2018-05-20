@@ -88,7 +88,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="開始時間" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3YA-xU-xkh">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="開始時間(例：2018年05月20日 10:00)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3YA-xU-xkh">
                                                     <rect key="frame" x="16" y="11" width="343" height="32"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -110,7 +110,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="終了時間" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92f-yU-RG4">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="終了時間(例：2018年05月20日 17:00)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92f-yU-RG4">
                                                     <rect key="frame" x="16" y="11" width="343" height="32"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -180,8 +180,10 @@
                     <navigationItem key="navigationItem" title="投稿" id="43F-dc-4df"/>
                     <connections>
                         <outlet property="descriptionTextView" destination="cvv-Xl-jMJ" id="Gvh-8r-dY6"/>
+                        <outlet property="endDateTimeTextField" destination="92f-yU-RG4" id="sqD-Gq-r0p"/>
                         <outlet property="linkTextField" destination="uge-On-sa4" id="mdM-nd-z1a"/>
                         <outlet property="locationTextFielld" destination="VRn-wv-wdQ" id="gL7-jc-d2b"/>
+                        <outlet property="startDateTimeTextField" destination="3YA-xU-xkh" id="VWi-PP-NMk"/>
                         <outlet property="titleTextField" destination="SeP-mC-8sj" id="Tdy-mo-Rzq"/>
                     </connections>
                 </tableViewController>
