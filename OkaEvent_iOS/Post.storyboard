@@ -177,7 +177,13 @@
                             <outlet property="delegate" destination="NA3-BZ-knb" id="t6v-1S-csJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="投稿" id="43F-dc-4df"/>
+                    <navigationItem key="navigationItem" title="投稿" id="43F-dc-4df">
+                        <barButtonItem key="rightBarButtonItem" title="投稿" id="3vA-0v-eCT">
+                            <connections>
+                                <action selector="postTapped:" destination="NA3-BZ-knb" id="UfK-zk-0jj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="cvv-Xl-jMJ" id="Gvh-8r-dY6"/>
                         <outlet property="endDateTimeTextField" destination="92f-yU-RG4" id="sqD-Gq-r0p"/>

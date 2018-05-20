@@ -31,4 +31,7 @@ class PostEventTableViewController: UITableViewController, UITextFieldDelegate, 
         return true
     }
 
+    @IBAction func postTapped(_ sender: Any) {
+        
+    }
 }
