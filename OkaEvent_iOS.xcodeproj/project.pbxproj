@@ -192,7 +192,6 @@
 				B2B487F91FDCFEC600BDB5A9 /* Frameworks */,
 				B2B487FA1FDCFEC600BDB5A9 /* Resources */,
 				08230222E88BEA79B9EE700E /* [CP] Embed Pods Frameworks */,
-				A5FDFB371726B50A9124C705 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,8 +210,6 @@
 				B2B4880C1FDCFEC600BDB5A9 /* Sources */,
 				B2B4880D1FDCFEC600BDB5A9 /* Frameworks */,
 				B2B4880E1FDCFEC600BDB5A9 /* Resources */,
-				DD188002847AAA55C86B7F4F /* [CP] Embed Pods Frameworks */,
-				FFEC4CF224ACE750F7B88E54 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,8 +229,6 @@
 				B2B488171FDCFEC600BDB5A9 /* Sources */,
 				B2B488181FDCFEC600BDB5A9 /* Frameworks */,
 				B2B488191FDCFEC600BDB5A9 /* Resources */,
-				C76EE6BA089BFE5A3077137A /* [CP] Embed Pods Frameworks */,
-				0A5ADA9AFAF97B962E9E93F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -357,21 +352,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOS/Pods-OkaEvent_iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0A5ADA9AFAF97B962E9E93F5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSUITests/Pods-OkaEvent_iOSUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		21FA9C8D0FD939C0519DEA1D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,66 +404,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5FDFB371726B50A9124C705 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOS/Pods-OkaEvent_iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C76EE6BA089BFE5A3077137A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSUITests/Pods-OkaEvent_iOSUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD188002847AAA55C86B7F4F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSTests/Pods-OkaEvent_iOSTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FFEC4CF224ACE750F7B88E54 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSTests/Pods-OkaEvent_iOSTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
