@@ -68,8 +68,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         defaultStore = Firestore.firestore()
         let ref = defaultStore.collection("events")
         
-        self.events.removeAll()
-        self.TreeView.reloadData()
+        events.removeAll()
+        TreeView.reloadData()
         ref.order(by: "start_datetime").limit(to: 3).getDocuments{ (snapshot, error) in
             guard let snapshot = snapshot
                 else{
