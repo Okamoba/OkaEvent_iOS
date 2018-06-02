@@ -198,6 +198,7 @@
 				B2B487F91FDCFEC600BDB5A9 /* Frameworks */,
 				B2B487FA1FDCFEC600BDB5A9 /* Resources */,
 				08230222E88BEA79B9EE700E /* [CP] Embed Pods Frameworks */,
+				3B0CAD138392F529B0E949E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,6 +217,8 @@
 				B2B4880C1FDCFEC600BDB5A9 /* Sources */,
 				B2B4880D1FDCFEC600BDB5A9 /* Frameworks */,
 				B2B4880E1FDCFEC600BDB5A9 /* Resources */,
+				BD953C466A10A55BABD14BF6 /* [CP] Embed Pods Frameworks */,
+				5F4E48D62C5F1618C8557257 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +238,8 @@
 				B2B488171FDCFEC600BDB5A9 /* Sources */,
 				B2B488181FDCFEC600BDB5A9 /* Frameworks */,
 				B2B488191FDCFEC600BDB5A9 /* Resources */,
+				D5A66973E3E8F75ACF8AFDF7 /* [CP] Embed Pods Frameworks */,
+				8ED08605848B896ECED14ABF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,6 +336,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOS/Pods-OkaEvent_iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -344,6 +350,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
@@ -395,6 +402,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3B0CAD138392F529B0E949E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOS/Pods-OkaEvent_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F4E48D62C5F1618C8557257 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSTests/Pods-OkaEvent_iOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		65C0805F65FD99AD3FF76BAC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,6 +448,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ED08605848B896ECED14ABF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSUITests/Pods-OkaEvent_iOSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD953C466A10A55BABD14BF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSTests/Pods-OkaEvent_iOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5A66973E3E8F75ACF8AFDF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaEvent_iOSUITests/Pods-OkaEvent_iOSUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

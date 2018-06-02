@@ -10,29 +10,28 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import FirebaseFirestore
+import Floaty
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FloatyDelegate
  {
-    @IBOutlet weak var TreeView: UITableView!
+    @IBOutlet weak var treeView: UITableView!
+    
+    var floatyButton: Floaty = Floaty()
+    
     //配列fruitsを設定
     var events: Array<EventData> = [EventData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        floatyButton.fabDelegate = self
+        view.addSubview(floatyButton)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    //イベント投稿画面の動作確認用
-    //float buttonが実装された消す
-    @IBAction func addButtonTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Post", bundle: nil)
-        let postVC = storyboard.instantiateViewController(withIdentifier: "PostEventNavigationController")
-        present(postVC, animated: true, completion: nil)
     }
     
     func mailAuthViewControllerTransition() {
@@ -73,9 +72,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         defaultStore = Firestore.firestore()
         let ref = defaultStore.collection("events")
         
-        self.events.removeAll()
-        self.TreeView.reloadData()
-        ref.order(by: "start_datetime").limit(to: 3).getDocuments{ (snapshot, error) in
+        events.removeAll()
+        treeView.reloadData()
+        ref.order(by: "start_datetime").limit(to: 100).getDocuments{ (snapshot, error) in
             guard let snapshot = snapshot
                 else{
                     print("Error : \(error!)")
@@ -91,8 +90,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let url: String = docData["url"] as! String
                 self.events.append(EventData(name: dataName, startDateTime: startDataDate, endDateTime: endDataDate, address: adress, description: dataDescription, url: url))
             }
-            self.TreeView.reloadData()
+            self.treeView.reloadData()
         }
+    }
+    
+    func emptyFloatySelected(_ floaty: Floaty) {
+        //イベント投稿画面へ遷移
+        let storyboard = UIStoryboard(name: "Post", bundle: nil)
+        let postVC = storyboard.instantiateViewController(withIdentifier: "PostEventNavigationController")
+        present(postVC, animated: true, completion: nil)
     }
 }
 
