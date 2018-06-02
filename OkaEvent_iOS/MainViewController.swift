@@ -33,14 +33,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    //イベント投稿画面の動作確認用
-    //float buttonが実装された消す
-    @IBAction func addButtonTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Post", bundle: nil)
-        let postVC = storyboard.instantiateViewController(withIdentifier: "PostEventNavigationController")
-        present(postVC, animated: true, completion: nil)
-    }
     
     func mailAuthViewControllerTransition() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Authentication", bundle: nil)
@@ -82,7 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         events.removeAll()
         treeView.reloadData()
-        ref.order(by: "start_datetime").limit(to: 3).getDocuments{ (snapshot, error) in
+        ref.order(by: "start_datetime").limit(to: 100).getDocuments{ (snapshot, error) in
             guard let snapshot = snapshot
                 else{
                     print("Error : \(error!)")
@@ -103,7 +95,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func emptyFloatySelected(_ floaty: Floaty) {
-        print("Floaty emptyFloatySelected")
+        //イベント投稿画面へ遷移
+        let storyboard = UIStoryboard(name: "Post", bundle: nil)
+        let postVC = storyboard.instantiateViewController(withIdentifier: "PostEventNavigationController")
+        present(postVC, animated: true, completion: nil)
     }
 }
 
