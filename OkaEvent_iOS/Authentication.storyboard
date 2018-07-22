@@ -10,6 +10,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Auth Top View Controller-->
+        <scene sceneID="QUX-lW-oC3">
+            <objects>
+                <viewController id="trn-vH-xPu" customClass="AuthTopViewController" customModule="OkaEvent_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kwG-9q-YDW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAK-BJ-rm4">
+                                <rect key="frame" x="62" y="509" width="251" height="30"/>
+                                <state key="normal" title="Emailでログインまたはサインアップ"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vNo-Rc-chH" firstAttribute="bottom" secondItem="FAK-BJ-rm4" secondAttribute="bottom" constant="128" id="1lu-Sh-qas"/>
+                            <constraint firstItem="FAK-BJ-rm4" firstAttribute="centerX" secondItem="kwG-9q-YDW" secondAttribute="centerX" id="SNL-fS-CQJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vNo-Rc-chH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0I-eL-WGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1094" y="-75"/>
+        </scene>
         <!--Mail Auth View Controller-->
         <scene sceneID="miN-Ie-hPZ">
             <objects>
