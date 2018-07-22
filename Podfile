@@ -9,6 +9,7 @@ target 'OkaEvent_iOS' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'FirebaseUI/Auth'
 
   target 'OkaEvent_iOSTests' do
     inherit! :search_paths
