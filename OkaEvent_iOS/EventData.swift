@@ -9,11 +9,21 @@
 import Foundation
 
 struct EventData {
-    var name: String
-    var date: String
+    let name: String
+    let startDateTime: Date
+    let endDateTime: Date
+    let address: String
+    let description: String
+    let url: String
     
-    init(name: String, date: String) {
-        self.name = name
-        self.date = date
+    func toDictionary() -> [String: Any] {
+        var dic:[String:Any] = [:]
+        dic["name"] = name
+        dic["start_datetime"] = startDateTime
+        dic["end_datetime"] = endDateTime
+        dic["address"] = address
+        dic["text"] = description
+        dic["url"] = url
+        return dic
     }
 }
