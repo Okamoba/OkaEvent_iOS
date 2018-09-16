@@ -56,14 +56,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         return cell
     }
-    
-    @IBAction func configTapped(_ sender: Any) {
-        //イベント投稿画面へ遷移
-        let storyboard = UIStoryboard(name: "Config", bundle: nil)
-        let configVC = storyboard.instantiateViewController(withIdentifier: "ConfigTableViewController")
-        present(configVC, animated: true, completion: nil)
-    }
-    
+
     func loadEventList(){
         var defaultStore: Firestore!
         defaultStore = Firestore.firestore()
