@@ -44,6 +44,10 @@ class PostEventTableViewController: UITableViewController, UITextFieldDelegate, 
             endDateTimeTextField.text != ""
     }
     
+    @IBAction func cancelTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+
     //textFieldのフォーカスが移動したら呼ばれる
     func textFieldDidEndEditing(_ textField: UITextField) {
         //前後の余計な余白を削除
