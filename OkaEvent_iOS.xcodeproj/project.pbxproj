@@ -19,6 +19,7 @@
 		CC48B47633C17B19B823F004 /* Pods_OkaEvent_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B0C1C9D4A6356551B1FE08 /* Pods_OkaEvent_iOSUITests.framework */; };
 		E913446220144D9900A833C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E913446120144D9900A833C3 /* GoogleService-Info.plist */; };
 		E9134464201465A400A833C3 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9134463201465A400A833C3 /* Authentication.storyboard */; };
+		E950416D214E1DA200EC3DB7 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E950416C214E1DA200EC3DB7 /* Config.storyboard */; };
 		E959422421046B86003F899E /* AuthTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E959422321046B86003F899E /* AuthTopViewController.swift */; };
 		E95F7BA120B1462C002EC65C /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E95F7BA020B1462C002EC65C /* Post.storyboard */; };
 		E95F7BA520B14CC8002EC65C /* PostEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F7BA420B14CC8002EC65C /* PostEventTableViewController.swift */; };
@@ -68,6 +69,7 @@
 		E8AE8F380049B2729AD1A630 /* Pods-OkaEvent_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkaEvent_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OkaEvent_iOSTests/Pods-OkaEvent_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E913446120144D9900A833C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9134463201465A400A833C3 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		E950416C214E1DA200EC3DB7 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		E959422321046B86003F899E /* AuthTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTopViewController.swift; sourceTree = "<group>"; };
 		E95F7BA020B1462C002EC65C /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		E95F7BA420B14CC8002EC65C /* PostEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEventTableViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				B2B488031FDCFEC600BDB5A9 /* Main.storyboard */,
 				E95F7BA020B1462C002EC65C /* Post.storyboard */,
 				E9134463201465A400A833C3 /* Authentication.storyboard */,
+				E950416C214E1DA200EC3DB7 /* Config.storyboard */,
 				B2B488061FDCFEC600BDB5A9 /* Assets.xcassets */,
 				B2B488081FDCFEC600BDB5A9 /* LaunchScreen.storyboard */,
 				B2B4880B1FDCFEC600BDB5A9 /* Info.plist */,
@@ -298,6 +301,7 @@
 				B2B4880A1FDCFEC600BDB5A9 /* LaunchScreen.storyboard in Resources */,
 				E913446220144D9900A833C3 /* GoogleService-Info.plist in Resources */,
 				B2B488071FDCFEC600BDB5A9 /* Assets.xcassets in Resources */,
+				E950416D214E1DA200EC3DB7 /* Config.storyboard in Resources */,
 				B2B488051FDCFEC600BDB5A9 /* Main.storyboard in Resources */,
 				E95F7BA120B1462C002EC65C /* Post.storyboard in Resources */,
 				E9134464201465A400A833C3 /* Authentication.storyboard in Resources */,
