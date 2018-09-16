@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1018" y="214"/>
         </scene>
-        <!--Table View Controller-->
+        <!--設定-->
         <scene sceneID="lzS-Sp-zzP">
             <objects>
                 <tableViewController id="rOj-uu-84O" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                             <outlet property="delegate" destination="rOj-uu-84O" id="pk9-eu-xMH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Vnr-bI-mvU"/>
+                    <navigationItem key="navigationItem" title="設定" id="Vnr-bI-mvU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sp-sm-gx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
