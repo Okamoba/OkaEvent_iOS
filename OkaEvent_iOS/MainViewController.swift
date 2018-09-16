@@ -15,9 +15,9 @@ import Floaty
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FloatyDelegate
  {
     @IBOutlet weak var treeView: UITableView!
-    
+
     var floatyButton: Floaty = Floaty()
-    
+
     //配列fruitsを設定
     var events: Array<EventData> = [EventData]()
 
@@ -33,29 +33,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func mailAuthViewControllerTransition() {
-        let storyboard: UIStoryboard = UIStoryboard(name: "Authentication", bundle: nil)
-        let mailAuthViewController = storyboard.instantiateViewController(withIdentifier: "MailAuthViewController")
-        present(mailAuthViewController, animated: true, completion: nil)
-    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if Auth.auth().currentUser != nil {
-            loadEventList()
-        } else {
-            mailAuthViewControllerTransition()
-        }
+        loadEventList()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // セルを取得する
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventListCell", for: indexPath)
-        
+
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy年MM月dd日 h:mm:00"
         let startDateTime = events[indexPath.row].startDateTime
@@ -66,12 +56,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         return cell
     }
-    
+
     func loadEventList(){
         var defaultStore: Firestore!
         defaultStore = Firestore.firestore()
         let ref = defaultStore.collection("events")
-        
+
         events.removeAll()
         treeView.reloadData()
         ref.order(by: "start_datetime").limit(to: 100).getDocuments{ (snapshot, error) in
@@ -93,7 +83,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.treeView.reloadData()
         }
     }
-    
+
     func emptyFloatySelected(_ floaty: Floaty) {
         //イベント投稿画面へ遷移
         let storyboard = UIStoryboard(name: "Post", bundle: nil)
